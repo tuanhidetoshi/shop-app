@@ -1,0 +1,12 @@
+.c-about {
+  &__content {
+    line-height: 1.4;
+  }
+}
+
+.p-about {
+  padding: 40px 0 80px;
+  .c-title {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,31 @@
+.slick-slider {
+  .c-nextArrow {
+    z-index: 5;
+    cursor: pointer;
+    position: absolute;
+    bottom: 50%;
+    right: -5%;
+    ion-icon {
+      font-size: 64px;
+    }
+  }
+  .c-prevArrow {
+    z-index: 5;
+    cursor: pointer;
+    position: absolute;
+    bottom: 50%;
+    left: -5%;
+    ion-icon {
+      font-size: 64px;
+    }
+  }
+}
+
+.c-carousel {
+  &__header {
+    text-align: center;
+    font-size: 3.6rem;
+    line-height: 2;
+    margin-bottom: 30px;
+  }
+}

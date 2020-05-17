@@ -1,0 +1,90 @@
+.p-contact {
+  padding: 40px 0 60px;
+}
+
+.c-contact {
+  padding: 80px 0;
+  display: flex;
+  justify-content: space-between;
+  &__left {
+    padding: 40px 30px;
+    width: calc(50% - 60px);
+    height: 400px;
+    iframe {
+      border: 1px solid #333;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__right {
+    border-radius: 15px;
+    border: 1px solid #333;
+    width: calc(50% - 160px);
+    padding: 40px 70px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__maptitle {
+    font-size: 2.4rem;
+    margin-bottom: 30px;
+  }
+  &__title {
+    font-size: 2.4rem;
+    margin-bottom: 30px;
+  }
+  &__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    label {
+      font-size: 1.2rem;
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+    input,
+    textarea {
+      box-sizing: border-box;
+      width: 100%;
+      margin-bottom: 15px;
+      height: 30px;
+      padding: 5px 10px;
+      border: 1px solid #333;
+      border-radius: 5px;
+    }
+    textarea {
+      font-family: inherit;
+      resize: none;
+      height: 100px;
+      line-height: 1.4;
+    }
+    .c-line {
+      margin-bottom: 10px;
+    }
+  }
+  &__submit {
+    border: 1px solid green;
+    width: 30%;
+    align-self: center;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    color: green;
+    font-size: 1.2rem;
+    transition: all 0.5s;
+    &:hover {
+      background-color: green;
+      color: white;
+    }
+  }
+}
+
+.c-line {
+  align-self: center;
+  width: 100%;
+  border-bottom: 1px solid #333;
+  hr {
+    display: none;
+  }
+}
