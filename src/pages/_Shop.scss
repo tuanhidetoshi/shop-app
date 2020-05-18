@@ -5,6 +5,7 @@
   }
 }
 .c-shop {
+  align-items: flex-start;
   display: flex;
   justify-content: space-between;
   &__contain {
@@ -24,12 +25,18 @@
       height: 180px;
     }
   }
+  &__empty {
+    font-size: 3rem;
+    padding: 30px 20px;
+  }
 }
 .c-sidebar {
+  border-radius: 10px;
+  display: inline-block;
+  border: 1px solid #333;
   box-sizing: border-box;
   padding: 20px 5px;
   min-width: 200px;
-  background-color: gray;
   &__title {
     font-size: 1.4rem;
     margin-bottom: 40px;
@@ -37,14 +44,15 @@
     text-align: center;
   }
   &__catFil {
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     label {
       cursor: pointer;
       font-size: 1.2rem;
-      padding-left: 20px;
+      padding-left: 26px;
       position: relative;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
       input {
         display: none;
         &:checked + span {
@@ -58,17 +66,17 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        width: 12px;
-        height: 12px;
-        border: 1px solid #333;
+        width: 16px;
+        height: 16px;
+        border: 2px solid #333;
         border-radius: 50%;
-        transform: translateY(-2px);
+        transform: translateY(1px);
         &::before {
           display: none;
           content: "";
           position: absolute;
-          width: 6px;
-          height: 1px;
+          width: 8px;
+          height: 2px;
           top: 50%;
           left: 50%;
           background-color: #333;
@@ -78,13 +86,42 @@
           display: none;
           content: "";
           position: absolute;
-          width: 6px;
-          height: 1px;
+          width: 8px;
+          height: 2px;
           top: 50%;
           left: 50%;
           background-color: #333;
           transform: translate(-50%, -50%) rotate(90deg);
         }
+      }
+    }
+  }
+  &__slider {
+    width: 80%;
+    margin: 0 auto 20px;
+  }
+  &__val {
+    p {
+      margin-bottom: 10px;
+    }
+  }
+  &__input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    input {
+      width: 120px;
+    }
+    ion-icon {
+      cursor: pointer;
+      font-size: 20px;
+      padding: 0 4px;
+      &:nth-child(1):hover {
+        color: red;
+      }
+      &:nth-child(3):hover {
+        color: green;
       }
     }
   }

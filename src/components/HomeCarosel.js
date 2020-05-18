@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Slider from "react-slick";
 
 // Import css files
@@ -27,7 +27,7 @@ const PrevArrows = (props) => {
 export default (props) => {
   const settings = {
     arrows: true,
-    infinite: true,
+    infinite: props.list.length > 4,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -39,7 +39,7 @@ export default (props) => {
       <h3 className="c-carousel__header">{props.title}</h3>
       <Slider {...settings}>
         {props.list.map((item) => (
-          <ItemCard item={item} />
+          <ItemCard key={item.id} item={item} />
         ))}
       </Slider>
     </div>

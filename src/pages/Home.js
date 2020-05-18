@@ -5,9 +5,15 @@ import { NavLink } from "react-router-dom";
 import HomeCarosel from "../components/HomeCarosel";
 import New from "../components/News";
 
-import data from "../data/dummy-data";
+import { useSelector } from "react-redux";
 
 export default () => {
+  const shop = useSelector((state) => state.shop.shop);
+  const bestShop = shop.filter((item) => item.quantity >= 50);
+  const newShop = shop.filter(
+    (item) =>
+      Math.floor(Date.now() / 1000) - item.addedDate < 0.5 * 365 * 24 * 60 * 60
+  );
   return (
     <main>
       <section className="c-mainview">
@@ -28,12 +34,12 @@ export default () => {
       </section>
       <section>
         <div className="l-layout">
-          <HomeCarosel list={data.shop} title={"Hàng mới về"} />
+          <HomeCarosel list={bestShop} title={"Hàng mới về"} />
         </div>
       </section>
       <section>
         <div className="l-layout">
-          <HomeCarosel list={data.shop} title={"Bán chạy nhất"} />
+          <HomeCarosel list={newShop} title={"Bán chạy nhất"} />
         </div>
       </section>
       {/* <section>Feature</section>

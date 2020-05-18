@@ -12,7 +12,7 @@ export default () => {
             title="shop map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.13606971598!2d106.6633424145376!3d10.800888892304963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175292fe33e6ca3%3A0x30a1cbb2b5d98dbf!2zQ8O0bmcgdmnDqm4gSG_DoG5nIFbEg24gVGjhu6U!5e0!3m2!1svi!2s!4v1589729244941!5m2!1svi!2s"
             allowFullScreen
-            tabindex={"0"}
+            tabIndex={"0"}
           ></iframe>
         </div>
         <div className="c-contact__right">

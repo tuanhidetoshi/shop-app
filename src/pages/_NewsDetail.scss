@@ -1,0 +1,19 @@
+.p-newsDetail {
+  padding: 40px 0 60px;
+  &__image {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__content {
+    line-height: 1.6;
+  }
+  .c-title {
+    margin-bottom: 40px;
+  }
+}

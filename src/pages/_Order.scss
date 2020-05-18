@@ -1,0 +1,19 @@
+.p-order {
+  padding: 40px 0 60px;
+  .c-title {
+    margin-bottom: 20px;
+  }
+}
+.c-orderBtn {
+  border: 1px solid green;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: green;
+  transition: all 0.2s;
+  font-weight: bold;
+  text-transform: uppercase;
+  &:hover {
+    background-color: green;
+    color: #fff;
+  }
+}

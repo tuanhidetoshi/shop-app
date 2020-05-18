@@ -13,21 +13,23 @@
   &__navItem {
     margin: 10px 0;
   }
-  &__link {
+  &__link,
+  &__link:focus {
+    outline: none;
     text-decoration: none;
     color: #333;
     padding: 10px;
     position: relative;
     &::before {
       content: "";
-      width: 4px;
-      height: 4px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
-      background-color: #333;
+      border: 2px solid #333;
       position: absolute;
       top: 50%;
       left: 0;
-      transform: translateY(-20%);
+      transform: translate(-8px, -50%);
     }
     &::after {
       content: "";

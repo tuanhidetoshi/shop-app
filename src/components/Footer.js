@@ -46,8 +46,8 @@ export default (props) => {
           <p className="c-footer__phone">
             Số điện thoại: <span>0903574793</span>
           </p>
-          <ul class="c-footer__icon">
-            <li class="c-footer__iconContain">
+          <ul className="c-footer__icon">
+            <li className="c-footer__iconContain">
               <a
                 href="https://www.facebook.com/profile.php?id=100029290658028"
                 target="_blank"
@@ -59,7 +59,7 @@ export default (props) => {
                 ></ion-icon>
               </a>
             </li>
-            <li class="c-footer__iconContain">
+            <li className="c-footer__iconContain">
               <a
                 href="https://www.youtube.com/"
                 target="_blank"
@@ -75,7 +75,7 @@ export default (props) => {
         </div>
       </div>
       <div className="c-footer__copyright">
-        <p>&copy; Bản quyền và thiết kế bởi Tuấn {new Date().getFullYear}</p>
+        <p>&copy; Bản quyền và thiết kế bởi Tuấn 2020</p>
       </div>
     </div>
   );

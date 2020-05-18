@@ -3,18 +3,13 @@ import "./_Header.scss";
 import { NavLink } from "react-router-dom";
 
 import Item from "../components/CartItem";
-import CartItem from "../models/CartItems";
+import { useSelector } from "react-redux";
 
-import data from "../data/dummy-data";
+import { transNum } from "../helper/transNum";
 
 export default () => {
+  const cart = useSelector((state) => state.cart);
   const [showCart, setShowCart] = useState(false);
-
-  const [cartItems, setCartItems] = useState([...data.cart]);
-
-  const removeItemCart = (id) => {
-    setCartItems((cartItems) => cartItems.filter((item) => item.id !== id));
-  };
 
   const onCartHandler = () => {
     setShowCart((showCart) => !showCart);
@@ -81,7 +76,7 @@ export default () => {
         </li>
         <li onClick={onCartHandler} className="c-header__button">
           <ion-icon name="cart-outline" />
-          <span>10</span>
+          <span>{cart.cart.length}</span>
           <p>Cart</p>
         </li>
       </ul>
@@ -92,12 +87,12 @@ export default () => {
             <ion-icon onClick={onCartHandler} name="enter-outline"></ion-icon>
           </div>
           <ul className="c-dropdown__list">
-            {cartItems.map((item) => (
-              <Item key={item.id} removeItemCart={removeItemCart} item={item} />
+            {cart.cart.map((item) => (
+              <Item key={item.id} item={item} />
             ))}
           </ul>
           <p className="c-dropdown__total">
-            Total: <span>50.000</span>&#8363;
+            Total: <span>{transNum(cart.totalAmount)}</span>&#8363;
           </p>
           <div className="c-dropdown__nav">
             <NavLink

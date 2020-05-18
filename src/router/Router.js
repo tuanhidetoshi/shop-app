@@ -13,6 +13,7 @@ import NewsDetail from "../pages/NewsDetail";
 import Order from "../pages/Order";
 import Shop from "../pages/Shop";
 import notFound from "../pages/404";
+import ItemDetail from "../pages/ItemDetail";
 
 export default () => {
   return (
@@ -24,11 +25,12 @@ export default () => {
           <About />
         </Route>
         <Route exact path="/news" component={News} />
-        <Route path="/news/{id}" component={NewsDetail} />
+        <Route path="/news/:id" component={NewsDetail} />
         <Route path="/cart" component={Cart} />
         <Route path="/contact" component={Contact} />
         <Route path="/order" component={Order} />
-        <Route path="/shop" component={Shop} />
+        <Route exact path="/shop" component={Shop} />
+        <Route path="/shop/:id" component={ItemDetail} />
         <Route component={notFound} />
       </Switch>
       <Footer />
